@@ -12,8 +12,7 @@ switch ($_GET["op"]){
 	case 'guardaryeditar':
 		if (!file_exists($_FILES['imagen']['tmp_name']) || !is_uploaded_file($_FILES['imagen']['tmp_name']))
 		{
-			$imagen="";
-			//$imagen=$_POST["imagenactual"];
+			$imagen=$_POST["imagenactual"];
 		}
 		else 
 		{
