@@ -67,7 +67,6 @@ function listar() {
 
 function guardaryeditar(e)
 {
-	console.log("click");
 	e.preventDefault(); //No se activará la acción predeterminada del evento
 	$("#btnGuardar").prop("disabled",true);
 	var formData = new FormData($("#formulario")[0]);
@@ -89,6 +88,21 @@ function guardaryeditar(e)
 
 	});
 	limpiar();
+}
+
+
+function mostrar(idcategoria)
+{
+	$.post("../ajax/categoria.php?op=mostrar",{idcategoria : idcategoria}, function(data, status)
+	{
+		data = JSON.parse(data);		
+		mostrarform(true);
+
+		$("#nombre").val(data.nombre);
+		$("#descripcion").val(data.descripcion);
+ 		$("#idcategoria").val(data.idcategoria);
+
+ 	})
 }
 
 init();
