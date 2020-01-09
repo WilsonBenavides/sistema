@@ -105,4 +105,31 @@ function mostrar(idcategoria)
  	})
 }
 
+//Función para desactivar registros
+function desactivar(idcategoria)
+{
+	bootbox.confirm("¿Está Seguro de desactivar la Categoría?", function(result){
+		if(result)
+        {
+        	$.post("../ajax/categoria.php?op=desactivar", {idcategoria : idcategoria}, function(e){
+        		bootbox.alert(e);
+	            tabla.ajax.reload();
+        	});	
+        }
+	})
+}
+
+//Función para activar registros
+function activar(idcategoria) {
+	bootbox.confirm("¿Está Seguro de activar la Categoría?", function(result){
+		if(result)
+        {
+        	$.post("../ajax/categoria.php?op=activar", {idcategoria : idcategoria}, function(e){
+        		bootbox.alert(e);
+	            tabla.ajax.reload();
+        	});	
+        }
+	})
+}
+
 init();
