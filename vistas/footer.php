@@ -2,7 +2,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 2.3.0
         </div>
-        <strong>Copyright &copy; 2019 <a href="www.incanatoit.com">Anonymous</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2019 <a href="www.project.com">Anonymous</a>.</strong> All rights reserved.
     </footer>    
     <!-- jQuery 2.1.4 -->
     <script src="../public/js/jquery-3.1.1.min.js"></script>
@@ -19,5 +19,7 @@
     <script src="../public/datatables/jszip.min.js"></script>
     <script src="../public/datatables/pdfmake.min.js"></script>
     <script src="../public/datatables/vfs_fonts.js"></script>
+
+    <script src="../public/js/bootbox.min.js"></script>
   </body>
 </html>

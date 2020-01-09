@@ -5,6 +5,9 @@ function init() {
 	mostrarform(false);
 	listar();
 	
+	$("#formulario").on("submit", function(e) {		
+		guardaryeditar(e);
+	})
 }
 
 //Función limpiar
@@ -60,6 +63,32 @@ function listar() {
 	"iDisplayLength" : 5, //Paginación
 	"order" : [[ 0, "desc"]]//Ordernar (columna, orden)
 	}).DataTable();
+}
+
+function guardaryeditar(e)
+{
+	console.log("click");
+	e.preventDefault(); //No se activará la acción predeterminada del evento
+	$("#btnGuardar").prop("disabled",true);
+	var formData = new FormData($("#formulario")[0]);
+
+	$.ajax({
+
+		url: "../ajax/categoria.php?op=guardaryeditar",
+	    type: "POST",
+	    data: formData,
+	    contentType: false,
+	    processData: false,
+
+	    success: function(datos)
+	    {                    
+	          bootbox.alert(datos);	          
+	          mostrarform(false);
+	          tabla.ajax.reload();
+	    }
+
+	});
+	limpiar();
 }
 
 init();
