@@ -37,7 +37,7 @@ function cancelarform() {
 
 //Función listar
 function listar() {
-	tabla = $('#tblistado').dataTable({
+	tabla = $('#tbllistado').dataTable({
 		"aProcessing": true, //Activamos el procesamiento dle datatables
 		"aServerSide": true, //Paginación y filtrado realizados por el servidor
 		dom: 'Bfrtip', //Definimos los elementos del contro de tabla
