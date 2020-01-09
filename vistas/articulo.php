@@ -111,3 +111,4 @@ require 'footer.php';
 <!-- <script type="text/javascript" src="../public/js/JsBarcode.all.min.js"></script> -->
 <!-- <script type="text/javascript" src="../public/js/jquery.PrintArea.js"></script> -->
 <script type="text/javascript" src="scripts/articulo.js"></script>
+ 
