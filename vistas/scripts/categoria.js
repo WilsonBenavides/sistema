@@ -6,16 +6,16 @@ function init() {
 	listar();
 	
 	$("#formulario").on("submit", function(e) {		
-		
+
 		guardaryeditar(e);
 	})
 }
 
 //Función limpiar
 function limpiar() {
-	$("idcategoria").val("");
-	$("nombre").val("");
-	$("descripcion").val("");
+	$("#idcategoria").val("");
+	$("#nombre").val("");
+	$("#descripcion").val("");
 
 }
 
